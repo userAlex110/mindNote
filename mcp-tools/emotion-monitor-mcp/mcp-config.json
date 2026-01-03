@@ -1,0 +1,36 @@
+{
+  "mcp": {
+    "version": "1.0.0",
+    "name": "emotion-monitor-mcp",
+    "description": "MCP tool for environment monitoring",
+    "tools": [
+      {
+        "name": "get_current_environment",
+        "description": "Get current environment data including indoor and outdoor conditions",
+        "parameters": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      {
+        "name": "get_environment_history",
+        "description": "Get historical environment data within a date range",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "start_date": {
+              "type": "string",
+              "format": "date",
+              "description": "Start date in YYYY-MM-DD format"
+            },
+            "end_date": {
+              "type": "string",
+              "format": "date",
+              "description": "End date in YYYY-MM-DD format"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

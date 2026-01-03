@@ -1,0 +1,66 @@
+[
+  {
+    "diary_id": "7191e013-586f-4ab7-864e-c1d0ad0f49e8",
+    "timestamp": "2026-01-02T14:16:10.613Z",
+    "mood_score": 7,
+    "mood_tags": [
+      "calm",
+      "focused"
+    ],
+    "environment_data": {
+      "temperature": 23.5,
+      "humidity": 45,
+      "light_level": 300,
+      "weather": "sunny"
+    },
+    "note": "Had a productive day at work"
+  },
+  {
+    "diary_id": "c1cce9de-5a4a-42bd-bf37-d292b8570e84",
+    "timestamp": "2026-01-03T14:16:10.614Z",
+    "mood_score": 8,
+    "mood_tags": [
+      "happy",
+      "energetic"
+    ],
+    "environment_data": {
+      "temperature": 24.2,
+      "humidity": 48,
+      "light_level": 450,
+      "weather": "sunny"
+    },
+    "note": "Great day with good weather"
+  },
+  {
+    "diary_id": "afd88301-beac-4272-aa8e-7b2aaa38e314",
+    "timestamp": "2026-01-03T14:16:22.123Z",
+    "mood_score": 8,
+    "mood_tags": [
+      "happy",
+      "relaxed"
+    ],
+    "environment_data": {
+      "temperature": 24.5,
+      "humidity": 50,
+      "light_level": 400,
+      "weather": "sunny"
+    },
+    "note": "Enjoying a beautiful day"
+  },
+  {
+    "diary_id": "7e9024d2-0195-4890-b684-d0a89b843121",
+    "timestamp": "2026-01-03T14:22:00.343Z",
+    "mood_score": 7,
+    "mood_tags": [
+      "calm",
+      "focused"
+    ],
+    "environment_data": {
+      "temperature": 23.5,
+      "humidity": 45,
+      "light_level": 300,
+      "weather": "sunny"
+    },
+    "note": "Working on mindNote project"
+  }
+]

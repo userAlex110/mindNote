@@ -1,0 +1,126 @@
+{
+  "mcp": {
+    "version": "1.0.0",
+    "name": "diary-record-mcp",
+    "description": "MCP tool for emotion diary recording and management",
+    "tools": [
+      {
+        "name": "record_emotion_diary",
+        "description": "Record a new emotion diary entry with mood score, tags, and optional environment data",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "mood_score": {
+              "type": "number",
+              "description": "Mood score from 1-10",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "mood_tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Array of mood tags (e.g., ['happy', 'calm', 'energetic'])"
+            },
+            "environment_data": {
+              "type": "object",
+              "description": "Optional environment data",
+              "properties": {
+                "temperature": {
+                  "type": "number",
+                  "description": "Temperature in Celsius"
+                },
+                "humidity": {
+                  "type": "number",
+                  "description": "Humidity percentage"
+                },
+                "light_level": {
+                  "type": "number",
+                  "description": "Light level in lux"
+                },
+                "weather": {
+                  "type": "string",
+                  "description": "Weather condition"
+                }
+              }
+            },
+            "note": {
+              "type": "string",
+              "description": "Optional user note"
+            }
+          },
+          "required": ["mood_score", "mood_tags"]
+        }
+      },
+      {
+        "name": "get_emotion_diary",
+        "description": "Retrieve emotion diary entries within a date range",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "start_date": {
+              "type": "string",
+              "format": "date",
+              "description": "Start date in YYYY-MM-DD format"
+            },
+            "end_date": {
+              "type": "string",
+              "format": "date",
+              "description": "End date in YYYY-MM-DD format"
+            },
+            "limit": {
+              "type": "number",
+              "description": "Maximum number of entries to return"
+            }
+          }
+        }
+      },
+      {
+        "name": "update_emotion_diary",
+        "description": "Update an existing emotion diary entry",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "diary_id": {
+              "type": "string",
+              "description": "ID of the diary entry to update"
+            },
+            "mood_score": {
+              "type": "number",
+              "description": "New mood score from 1-10",
+              "minimum": 1,
+              "maximum": 10
+            },
+            "mood_tags": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "New array of mood tags"
+            },
+            "note": {
+              "type": "string",
+              "description": "New user note"
+            }
+          },
+          "required": ["diary_id"]
+        }
+      },
+      {
+        "name": "delete_emotion_diary",
+        "description": "Delete an emotion diary entry",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "diary_id": {
+              "type": "string",
+              "description": "ID of the diary entry to delete"
+            }
+          },
+          "required": ["diary_id"]
+        }
+      }
+    ]
+  }
+}

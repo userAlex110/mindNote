@@ -1,0 +1,66 @@
+{
+  "mcp": {
+    "version": "1.0.0",
+    "name": "insight-generator-mcp",
+    "description": "MCP tool for emotion insight generation",
+    "tools": [
+      {
+        "name": "get_emotion_insights",
+        "description": "Get emotion insights based on diary entries",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "start_date": {
+              "type": "string",
+              "format": "date",
+              "description": "Start date in YYYY-MM-DD format"
+            },
+            "end_date": {
+              "type": "string",
+              "format": "date",
+              "description": "End date in YYYY-MM-DD format"
+            }
+          }
+        }
+      },
+      {
+        "name": "get_trend_analysis",
+        "description": "Get trend analysis of mood patterns",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "period": {
+              "type": "string",
+              "enum": ["week", "month", "quarter"],
+              "description": "Time period for analysis"
+            }
+          }
+        }
+      },
+      {
+        "name": "export_data",
+        "description": "Export diary data in specified format",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "start_date": {
+              "type": "string",
+              "format": "date",
+              "description": "Start date in YYYY-MM-DD format"
+            },
+            "end_date": {
+              "type": "string",
+              "format": "date",
+              "description": "End date in YYYY-MM-DD format"
+            },
+            "format": {
+              "type": "string",
+              "enum": ["json", "csv"],
+              "description": "Export format"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
