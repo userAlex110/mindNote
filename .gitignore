@@ -96,3 +96,6 @@ platformio/
 # Temporary files
 *.tmp
 *.temp
+
+# continue
+./continue
